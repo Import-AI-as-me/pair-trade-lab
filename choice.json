@@ -1,0 +1,55 @@
+{
+  "entry": 2.0,
+  "small_size": 0.3368671869722166,
+  "pick_results": [
+    {
+      "entry": 1.0,
+      "net_return": 0.026512769900516542,
+      "sharpe": 0.30084148510863135,
+      "max_drawdown": -0.09475193560349215,
+      "price_pnl": 0.11292012479006328,
+      "funding_pnl": 0.0008910918699071775,
+      "cost": 0.08729844675944856,
+      "turnover": 174.59689351889713,
+      "mean_gross": 0.6309291836134098,
+      "mean_net": 0.018029999029800087,
+      "active_share": 0.6308219178082192,
+      "rebalance_count": 1465
+    },
+    {
+      "entry": 1.5,
+      "net_return": -0.025078119792048992,
+      "sharpe": -0.21659410485171096,
+      "max_drawdown": -0.15143708453418914,
+      "price_pnl": 0.02763467649112661,
+      "funding_pnl": 0.0009994721369407664,
+      "cost": 0.0537122684201197,
+      "turnover": 107.42453684023941,
+      "mean_gross": 0.41108829589449014,
+      "mean_net": 0.012649051756930218,
+      "active_share": 0.410958904109589,
+      "rebalance_count": 953
+    },
+    {
+      "entry": 2.0,
+      "net_return": 0.0498340435354816,
+      "sharpe": 0.6992299295306916,
+      "max_drawdown": -0.06984251123296226,
+      "price_pnl": 0.0875335947873644,
+      "funding_pnl": 0.0006360499928285603,
+      "cost": 0.03833560124471325,
+      "turnover": 76.6712024894265,
+      "mean_gross": 0.2726971293863982,
+      "mean_net": 0.0066484902785540435,
+      "active_share": 0.2726027397260274,
+      "rebalance_count": 633
+    }
+  ],
+  "fit": {
+    "fixed_beta": 0.8222535941015687,
+    "train_noise": 0.06946275529632023,
+    "train_spread_ar1": 0.9993859010415589,
+    "train_half_life_hours": 1128.3756775101672,
+    "ar_note": "A train fit is not proof of a stable spread in later years."
+  }
+}

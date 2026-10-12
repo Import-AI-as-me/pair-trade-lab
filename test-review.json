@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-12T19:27:16.097372+00:00",
+  "command": "python -m unittest -v test_study",
+  "tests_run": 17,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 0.047373,
+  "source_sha256": {
+    "study.py": "50d5ed9f41b643354c0f20a91c520acf822c8a3a3b27b240a4609982228eaf7c",
+    "test_study.py": "88783d78da1176a4566fcc121da31fc41857c054a98d338ffd6711d9abcbf1a7"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "pandas": "2.3.3"
+  },
+  "data": "Small synthetic fixtures only. No downloads, keys, or private data.",
+  "accounting_checks": [
+    "Changing the hedge at constant prices creates no gross price profit and pays trade costs.",
+    "Positive funding debits a long position and credits a short position, using the mark-price proxy.",
+    "Funding uses the carried coin units before a same-hour entry, flip, or final close.",
+    "A position flip pays for the old and new notionals on both legs.",
+    "The last row closes all positions once and charges current-price notional.",
+    "Without an order, coin units stay fixed and portfolio weights drift with prices.",
+    "Open-to-open price changes belong to the carried position.",
+    "Cash changes agree with price PnL plus funding minus costs, and returns compound to final equity.",
+    "Missing values, invalid prices, partial orders, and swapped weight columns are rejected."
+  ],
+  "timing_checks": [
+    "A close shock in row k first affects an order in row k+2.",
+    "Orders use only the fixed allowed UTC hours.",
+    "The uncertainty gate blocks entries but does not itself close an existing position.",
+    "The rolling signal mean and sample standard deviation exclude the current close.",
+    "Changing closes from row t-1 onward leaves signals through t-2 and orders and cash ledgers through open t unchanged for all five methods."
+  ],
+  "resolved_findings": [
+    {
+      "issue": "Swapped BTC and ETH weight columns were accepted and silently changed the intended positions.",
+      "fix": "The cash ledger now checks that weight columns have the required leg order.",
+      "regression_test": "test_weight_columns_cannot_silently_swap_the_legs"
+    }
+  ],
+  "review_limits": [
+    "These tests check numerical accounting and information timing, not trading profit or market efficiency.",
+    "Hourly opens are assumed fills; real spread, depth, queue position, and market impact are not tested.",
+    "The funding price is an hourly mark-open proxy, not a reconstruction of exchange fee records.",
+    "Margin calls, liquidation, and exchange failure are outside the ledger.",
+    "The tests do not certify a full historical data download or all model-selection uncertainty."
+  ]
+}

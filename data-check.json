@@ -1,0 +1,88 @@
+{
+  "start_month": "2021-01",
+  "end_month": "2025-12",
+  "timezone": "UTC",
+  "expected_hours": 43824,
+  "archive_count": 370,
+  "all_archive_sha256_verified": true,
+  "funding_hour_window": "[t, t + 1 hour)",
+  "funding_price": "mark-price open of the event hour; settlement-price proxy",
+  "symbols": {
+    "BTCUSDT": {
+      "price_rows": 43824,
+      "mark_price_rows": 43824,
+      "funding_events": 5478,
+      "missing_price_hours": 0,
+      "missing_mark_price_hours": 0,
+      "duplicate_price_times": 0,
+      "monthly_mark_price_missing_hours": 192,
+      "daily_mark_supplement_days": [
+        "2021-07-01",
+        "2021-07-24",
+        "2021-07-25",
+        "2021-07-26",
+        "2021-07-27",
+        "2022-07-31",
+        "2022-10-02",
+        "2023-02-24"
+      ],
+      "daily_mark_supplement_hours": 192,
+      "duplicate_funding_times": 0,
+      "missing_funding_windows": 0,
+      "funding_interval_hours": [
+        8
+      ],
+      "funding_offset_seconds_min": 0.0,
+      "funding_offset_seconds_max": 0.047,
+      "price_time_units": [
+        "ms"
+      ],
+      "mark_time_units": [
+        "ms"
+      ],
+      "funding_time_units": [
+        "ms"
+      ],
+      "first_price_time": "2021-01-01T00:00:00+00:00",
+      "last_price_time": "2025-12-31T23:00:00+00:00",
+      "first_funding_time": "2021-01-01T00:00:00.002000+00:00",
+      "last_funding_time": "2025-12-31T16:00:00.001000+00:00"
+    },
+    "ETHUSDT": {
+      "price_rows": 43824,
+      "mark_price_rows": 43824,
+      "funding_events": 5478,
+      "missing_price_hours": 0,
+      "missing_mark_price_hours": 0,
+      "duplicate_price_times": 0,
+      "monthly_mark_price_missing_hours": 48,
+      "daily_mark_supplement_days": [
+        "2022-10-02",
+        "2023-02-24"
+      ],
+      "daily_mark_supplement_hours": 48,
+      "duplicate_funding_times": 0,
+      "missing_funding_windows": 0,
+      "funding_interval_hours": [
+        8
+      ],
+      "funding_offset_seconds_min": 0.0,
+      "funding_offset_seconds_max": 0.047,
+      "price_time_units": [
+        "ms"
+      ],
+      "mark_time_units": [
+        "ms"
+      ],
+      "funding_time_units": [
+        "ms"
+      ],
+      "first_price_time": "2021-01-01T00:00:00+00:00",
+      "last_price_time": "2025-12-31T23:00:00+00:00",
+      "first_funding_time": "2021-01-01T00:00:00.002000+00:00",
+      "last_funding_time": "2025-12-31T16:00:00.001000+00:00"
+    }
+  },
+  "joined_csv_sha256": "9842f4471588851c7f18b07ad41be1f9ba06b64e52ef7872f1a583bd807bcb63",
+  "funding_csv_sha256": "adc3118311f53b99b6305623f3e1608cdb9e03b45d5110492362fffb05ae85ad"
+}
